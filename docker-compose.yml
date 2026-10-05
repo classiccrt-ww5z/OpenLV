@@ -1,0 +1,52 @@
+services:
+  db:
+    image: mariadb:11
+    restart: unless-stopped
+    environment:
+      MARIADB_ROOT_PASSWORD: ${ROOT_PASSWORD:?run ./install.sh first}
+      MARIADB_DATABASE: ${DB_DATABASE:-openlv}
+      MARIADB_USER: ${DB_USER:-openlv}
+      MARIADB_PASSWORD: ${DB_PASSWORD:?run ./install.sh first}
+    volumes:
+      - dbdata:/var/lib/mysql
+    healthcheck:
+      test: ["CMD", "healthcheck.sh", "--connect", "--innodb_initialized"]
+      interval: 5s
+      timeout: 5s
+      retries: 20
+
+  web:
+    build: .
+    restart: unless-stopped
+    ports:
+      - "${WEB_PORT:-8888}:80"
+    env_file: .env
+    # Only app/ is mounted, and it is the document root. The Dockerfile, compose
+    # file, install.sh, schema.sql and .env never enter the container.
+    volumes:
+      - ./app:/var/www/html/app
+    depends_on:
+      db:
+        condition: service_healthy
+
+  # Transcodes queued uploads. One video per call, so it loops. Without this,
+  # uploads sit in the `converting` table forever and never become playable.
+  worker:
+    build: .
+    restart: unless-stopped
+    user: "33:33"
+    env_file: .env
+    command: >
+      sh -c 'while true; do out=$$(php /var/www/html/app/_crons/converter.php "key=$$CONVERTER_KEY" 2>&1 | tail -3);
+      if [ "$$out" != "nothing" ] && [ -n "$$out" ]; then
+      printf "%s\n%s\n---\n" "$$(date -Is)" "$$out" | tee -a /var/www/html/app/_crons/worker.log;
+      fi;
+      sleep 2; done'
+    volumes:
+      - ./app:/var/www/html/app
+    depends_on:
+      db:
+        condition: service_healthy
+
+volumes:
+  dbdata:

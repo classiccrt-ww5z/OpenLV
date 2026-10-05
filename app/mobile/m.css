@@ -1,0 +1,55 @@
+body{background-color:#333;margin-top:0;margin-left:0;margin-right:0;font-family:Verdana, Arial, sans-serif;font-size:12px;color:#FFF;}
+.largeText{font-size:110%;}
+.label{font-size:90%;font-weight:bold;padding-top:5px;}
+#logoDiv{text-align:right;}
+#copyright{font-size:90%;border-top:1px dashed #666;margin-top:10px;padding:5px 0;}
+#menu{margin-top:10px;padding-top:5px;border-top:1px dashed #666;}
+.menu{color:#000000;}
+.menuItemTop{padding-top:10px;}
+.pageMenu{font-size:120%;font-weight:bold;padding-bottom:5px;} 
+.pageTitle{font-size:120%;font-weight:bold;padding-bottom:8px;padding-top:5px;}
+.pageTitleNSB{font-size:120%;font-weight:bold;}
+.headerBanner{background-color:#ADADAD;height:23px;width:100%;}
+.errorMsg{padding-bottom:8px;padding-top:8px;border-bottom:1px dashed #666;padding-left:3px;}
+input.button{margin-top:2px;font-size:100%;color:black;padding:0;}
+.vList{padding-bottom:10px;}
+.vEntry{border-top:1px dashed #666;padding-top:3px;text-align:left;margin:3px 0;}
+.vEntryTop{border-top:none;padding-top:3px;text-align:left;margin:3px 0;}
+.vTitle{padding-bottom:1px;}
+.cList{padding-bottom:10px;padding-top:8px;}
+.cEntry{border-top:1px dashed #666;padding-top:3px;text-align:left;}
+.cUsername{padding-bottom:3px;}
+.vdEntry{border-top:none;padding-top:8px;text-align:left;margin:3px 0;}
+.vdRuntime{padding-bottom:2px;}
+.vdDate{padding-top:4px;font-size:90%;}
+.vdDesc{padding-top:5px;padding-bottom:15px;}
+.vdThumb{width:80px;height:60px;border:2px solid #FFDF8C;}
+.vPlaylistThmb{border-right: 1px solid #FFDF8C; border-bottom: 1px solid #FFDF8C; margin: 0px;}
+.playlistMargins{margin: 2px;}
+.pThumb{width:28px;height:30px;}
+.pSubTitleNSB{font-size:120%;font-weight:bold;padding-bottom:8px;padding-top:12px;}
+.gSection{border-top:1px dashed #666;padding-top:5px;margin:5px 0;}
+.helpQ{font-weight:bold;}
+.helpA{margin-left:6px;}
+.helpQLink{margin-bottom:4px;}
+.toTop{margin-bottom:10px;}
+.inputTextArea{color:#000;background:#FFF;margin-top:3px;margin-bottom:3px;width:80%;}
+.formArea{width:65%;font-family:Verdana, Arial, sans-serif;color:#000;padding:0;}
+.padL3{padding-left:3px;}
+.padL26{padding-left:26px;}
+.padR2{padding-right:2px;}
+.padT1{padding-top:1px;}
+.padT5{padding-top:5px;}
+.padT8{padding-top:8px;}
+.padB5{padding-bottom:5px;}
+a:link,a:visited,a:hover{color:#FFDF8C;}
+.menu a:link,.menu a:visited,.menu a:active,.menu a:hover{text-decoration:underline;color:#000000;}
+.smallText{font-size:90%;}
+.menuItem,.padT2{padding-top:2px;}
+.footer,.padT12{padding-top:12px;}
+.vSmallStill,.vaThumb{width:40px;height:30px;border:2px solid #FFDF8C;}
+.vInfo,.vdInfo,.pInfo{padding-left:2px;}
+.cComment,.padT3{padding-top:3px;}
+.vdTitle,.pTitle{padding-bottom:1px;font-weight:bold;}
+input.black{color:#000}
+

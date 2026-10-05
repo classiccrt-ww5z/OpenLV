@@ -1,0 +1,34 @@
+# secrets
+.env
+
+# generated media and caches
+app/usfi/v/*
+app/usfi/thmp/*
+app/usfi/prvw/*
+app/usfi/conv/*
+app/usfi/conv_2/*
+app/usfi/img/*
+app/usfi/avi/*
+app/usfi/avt/*
+app/usfi/bg/*
+app/usfi/bner/*
+app/usfi/wbner/*
+app/usfi/css/*
+app/usfi/tmp/*
+app/cache/*
+app/tmp/*
+!app/usfi/**/.gitkeep
+
+# worker and error logs
+app/_crons/worker.log
+app/_includes/_classes/ffmpeg.log
+app/usfi/error_logs/*
+*.log
+
+# editor / os junk
+.DS_Store
+Thumbs.db
+*.swp
+*~
+.idea/
+.vscode/

@@ -1,0 +1,9 @@
+.git
+usfi/v/*
+usfi/thmp/*
+usfi/prvw/*
+usfi/conv/*
+usfi/conv_2/*
+cache/*
+tmp/*
+*.log

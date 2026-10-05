@@ -1,0 +1,37 @@
+RewriteEngine On
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+
+RewriteRule ^user/(\w+)/(\w+)/?$ /profile.php?user=$1&page=$2 [L,QSA,NC]
+RewriteRule ^user/(\w+)/?$ /profile.php?user=$1 [L,QSA,NC]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^([^\.]+)$ $1.php [NC,L]
+
+RewriteCond %{REQUEST_URI} !^/_crons
+RewriteCond %{REQUEST_URI} !^/(_templates/_errors/.*)$
+RewriteRule ^_.*$ - [R=404,L]
+
+RewriteRule ^cache/ - [R=404,L]
+
+# Maintenance scripts and background workers must never be reachable over HTTP.
+# They are additionally guarded in code by _includes/_cli_only.php.
+RedirectMatch 404 ^/(_crons/|_includes/_cli_only\.php$|admin/_scripts/)
+
+<FilesMatch "^user_fix\.php$">
+    Require all denied
+</FilesMatch>
+
+# Deny dotfiles and the composer manifest. schema.sql and .env now live outside the
+# document root entirely, so they are not reachable even without these rules.
+<FilesMatch "^(\.|composer\.(json|lock))">
+    Require all denied
+</FilesMatch>
+
+ErrorDocument 404 /_templates/_errors/404.php
+ErrorDocument 400 /_templates/_errors/400.html
+ErrorDocument 500 /_templates/_errors/500.html
+
+Header always unset X-Powered-By
+Header unset X-Powered-By

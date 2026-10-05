@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+
+  <link rel="stylesheet" type="text/css" href="https://s.ytimg.com/yt/css/profile_preview.css">
+  <script src="https://s.ytimg.com/yt/js/channelPreview.js"></script>
+  <link rel="stylesheet" href="https://web.archive.org/web/20080730174350cs_/http://s.ytimg.com/yt/css/base_all-vfl48871.css" type="text/css">
+
+  <title>Channel Profile Preview</title>
+</head>
+
+<body>
+<!-- ================= CUSTOMIZE FORM (REQUIRED BY JS) ================= -->
+<form name="customizeForm">
+
+  <!-- TEMP HOLDER -->
+  <input type="hidden" name="tempInputHolder" value="">
+
+  <!-- OPACITY -->
+  <input type="range" name="opacity" value="95">
+
+  <!-- FONT -->
+  <select name="font">
+    <option value="Arial">Arial</option>
+    <option value="Verdana">Verdana</option>
+  </select>
+
+  <!-- BACKGROUND -->
+  <input type="text" name="body_background_color_display" value="#ffffff">
+  <input type="hidden" name="body_background_color">
+  <input type="hidden" name="body_background_color_changed" value="0">
+
+  <input type="text" name="body_background_preview_image" value="">
+  <input type="radio" name="repeat_background" checked>
+  <input type="radio" name="repeat_background">
+
+  <!-- COLOR FIELDS (DISPLAY / HIDDEN / CHANGED) -->
+  <!-- REPEAT THIS STRUCTURE FOR ALL 12 COLOR SETS -->
+
+  <!-- 0 -->
+  <input type="text" name="link_color_display" value="#03C">
+  <input type="hidden" name="link_color">
+  <input type="hidden" name="link_color_changed" value="0">
+
+  <!-- 1 -->
+  <input type="text" name="label_color_display" value="#666666">
+  <input type="hidden" name="label_color">
+  <input type="hidden" name="label_color_changed" value="0">
+
+  <!-- 2 -->
+  <input type="text" name="basic_box_and_image_border_color_display" value="#666666">
+  <input type="hidden" name="basic_box_and_image_border_color">
+  <input type="hidden" name="basic_box_and_image_border_color_changed" value="0">
+
+  <!-- 3 -->
+  <input type="text" name="basic_box_background_color_display" value="#ffffff">
+  <input type="hidden" name="basic_box_background_color">
+  <input type="hidden" name="basic_box_background_color_changed" value="0">
+
+  <!-- 4 -->
+  <input type="text" name="basic_box_text_color_display" value="#000000">
+  <input type="hidden" name="basic_box_text_color">
+  <input type="hidden" name="basic_box_text_color_changed" value="0">
+
+  <!-- 5 -->
+  <input type="text" name="highlight_box_background_color_display" value="#e6e6e6">
+  <input type="hidden" name="highlight_box_background_color">
+  <input type="hidden" name="highlight_box_background_color_changed" value="0">
+
+  <!-- 6 -->
+  <input type="text" name="highlight_box_text_color_display" value="#666666">
+  <input type="hidden" name="highlight_box_text_color">
+  <input type="hidden" name="highlight_box_text_color_changed" value="0">
+
+  <!-- 7 -->
+  <input type="text" name="video_log_box_border_color_display" value="#ffffff">
+  <input type="hidden" name="video_log_box_border_color">
+  <input type="hidden" name="video_log_box_border_color_changed" value="0">
+
+  <!-- 8 -->
+  <input type="text" name="video_log_box_background_color_display" value="#ffffff">
+  <input type="hidden" name="video_log_box_background_color">
+  <input type="hidden" name="video_log_box_background_color_changed" value="0">
+
+  <!-- 9 -->
+  <input type="text" name="video_log_post_title_color_display" value="#666666">
+  <input type="hidden" name="video_log_post_title_color">
+  <input type="hidden" name="video_log_post_title_color_changed" value="0">
+
+  <!-- 10 -->
+  <input type="text" name="video_log_post_text_color_display" value="#000000">
+  <input type="hidden" name="video_log_post_text_color">
+  <input type="hidden" name="video_log_post_text_color_changed" value="0">
+
+  <!-- THEMES -->
+  <input type="radio" name="theme" value="1" checked>
+  <input type="radio" name="theme" value="2">
+  <input type="radio" name="theme" value="3">
+  <input type="radio" name="theme" value="4">
+  <input type="radio" name="theme" value="5">
+  <input type="radio" name="theme" value="6">
+  <input type="radio" name="theme" value="7">
+  <input type="radio" name="theme" value="8">
+  <input type="radio" name="theme" value="10">
+
+  <!-- SHOW / HIDE CHECKBOXES -->
+  <input type="checkbox" id="user_videos" checked>
+  <input type="radio" id="user_videos_0" checked>
+  <input type="radio" id="user_videos_1">
+
+  <input type="checkbox" id="user_uploaded_videos" checked>
+  <input type="radio" id="user_uploaded_videos_0" checked>
+  <input type="radio" id="user_uploaded_videos_1">
+
+  <input type="checkbox" id="user_favorites" checked>
+  <input type="radio" id="user_favorites_0" checked>
+  <input type="radio" id="user_favorites_1">
+
+  <input type="checkbox" id="user_video_blog" checked>
+  <input type="checkbox" id="user_comments" checked>
+  <input type="radio" id="user_comments_0" checked>
+  <input type="radio" id="user_comments_1">
+
+  <input type="checkbox" id="user_subscribers" checked>
+  <input type="radio" id="user_subscribers_0" checked>
+  <input type="radio" id="user_subscribers_1">
+
+  <input type="checkbox" id="user_subscriptions" checked>
+  <input type="radio" id="user_subscriptions_0" checked>
+  <input type="radio" id="user_subscriptions_1">
+
+  <input type="checkbox" id="user_friends" checked>
+  <input type="radio" id="user_friends_0" checked>
+  <input type="radio" id="user_friends_1">
+
+  <input type="checkbox" id="user_featured" checked>
+  <input type="checkbox" id="user_recent_ratings" checked>
+  <input type="checkbox" id="user_recent_comments" checked>
+
+  <input type="checkbox" id="user_recent_activity" checked>
+  <input type="radio" id="user_recent_activity_0" checked>
+  <input type="radio" id="user_recent_activity_1">
+
+  <input type="checkbox" id="user_playlists" checked>
+
+</form><script>
+  document.customizeForm = document.getElementById('customizeForm');
+</script>
+<div id="baseDiv">
+
+  <!-- OUTER TWO-COLUMN LAYOUT -->
+  <table width="316" cellpadding="0" cellspacing="0">
+    <tr>
+
+      <!-- LEFT COLUMN -->
+      <td width="103" valign="top">
+
+        <!-- PROFILE -->
+        <div id="hide_profile_box">
+          <div id="smallHighlightBoxes">
+            <div class="smallProfileBox">
+              <span class="smallLabels">Profile</span><br>
+              Username<br>
+              <a href="#" class="smallHeaderLinks">View Profile</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- CONNECT -->
+        <div id="hide_connect_box">
+          <div id="smallBasicBoxes">
+            <div class="smallConnectBox">
+              <span class="smallLabels">Connect</span><br>
+              <a href="#" class="smallBodyLinks">Add Friend</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- BULLETINS -->
+        <div id="hide_bulletins_box">
+          <div class="smallBulletinBox" id="smallBulletinBox">
+            <table class="smallBulletinTable">
+              <tr>
+                <th>Bulletins</th>
+              </tr>
+              <tr>
+                <td>Bulletin item</td>
+              </tr>
+              <tr class="bulletinTableNB">
+                <td>Last bulletin</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+
+        <!-- COMMENTS LEFT -->
+        <div id="hide_comments_box_left">
+          <div class="smallCommentsBox" id="smallCommentsBox">
+            <table class="smallCommentsTable">
+              <tr>
+                <th>Comments</th>
+              </tr>
+              <tr class="smallCommentsTableNB">
+                <td>
+                  <div id="user_comments_0">
+                    Nice channel!
+                  </div>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+
+        <!-- SUBSCRIPTIONS LEFT -->
+        <div id="hide_channels_box_left">
+          <div id="user_subscriptions_0">
+            Subscriptions (Left)
+          </div>
+        </div>
+
+        <!-- SUBSCRIBERS LEFT -->
+        <div id="hide_subscribers_box_left">
+          <div id="user_subscribers_0">
+            Subscribers (Left)
+          </div>
+        </div>
+
+      </td>
+
+      <!-- RIGHT COLUMN -->
+      <td width="183" valign="top">
+
+        <!-- VIDEOS -->
+        <div id="hide_videos_box">
+          <div id="smallBasicBoxes">
+            <div class="smallScrollersBox">
+              <span class="smallLabels">Videos</span><br>
+              <img src="#" class="smallScrollerImgBorder" alt="">
+              <img src="#" class="smallScrollerImgBorder" alt="">
+              <div id="user_videos_1">Videos Right</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- UPLOADED VIDEOS -->
+        <div id="user_uploaded_videos_1">
+          Uploaded Videos
+        </div>
+
+        <!-- VIDEO LOG -->
+        <div id="hide_video_log_box">
+          <div id="smallVlogBoxes">
+            <div class="smallVlogBox">
+              <div class="smallVlogTitles">Video Log</div>
+              <div class="smallVlogText">
+                <div id="user_video_blog">
+                  Video log post text
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- FAVORITES -->
+        <div id="hide_favorites_box">
+          <div id="smallBasicBoxes">
+            <div class="smallChannelsDetailsBox">
+              <span class="smallLabels">Favorites</span><br>
+              <div id="user_favorites_1">
+                Favorite video
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- RECENT ACTIVITY -->
+        <div id="user_recent_activity_1">
+          Recent Activity
+        </div>
+
+        <!-- FRIENDS -->
+        <div id="user_friends_1">
+          Friends
+        </div>
+
+        <!-- RECENT RATINGS -->
+        <div id="user_recent_ratings">
+          Recent Ratings
+        </div>
+
+        <!-- RECENT COMMENTS -->
+        <div id="user_recent_comments">
+          Recent Comments
+        </div>
+
+        <!-- PLAYLISTS -->
+        <div id="user_playlists">
+          Playlists
+        </div>
+
+        <!-- FEATURED -->
+        <div id="user_featured">
+          Featured Content
+        </div>
+
+        <!-- CONTEST -->
+        <div id="user_contest">
+          Contest
+        </div>
+
+      </td>
+
+    </tr>
+  </table>
+
+</div>
+
+</body>
+</html>
